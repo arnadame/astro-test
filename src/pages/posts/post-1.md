@@ -12,7 +12,7 @@ tags: ["astro", "blogging", "learning in public"]
 
 Published on: 2022-07-01
 
-Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.
+<p>Welcome to my _new blog_ about learning Astro! Here, I will share my learning journey as I build a new website.</p>
 
 ## What I've accomplished
 
