@@ -3,7 +3,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 const PageTitle = "Home Page";
 ---
 <BaseLayout PageTitle={PageTitle}>
-	<div class="bg-gray-900 h-dvh text-white">
-		<h2>My awesome title</h2>
+	<div class="bg-gray-900 h-dvh text-white flex flex-col items-center">
+		<div>
+			<h2 class="text-3xl"><span class="text-[#10b981] text-3xl">Astro</span> Journey</h2>
+		</div>
 	</div>
 </BaseLayout>
