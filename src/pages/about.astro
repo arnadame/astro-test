@@ -37,7 +37,6 @@ const textCase = "uppercase";
         <h1 class="text-white text-4xl">{pageTitle}</h1>
 
         <div class="py-5 flex flex-col items-center w-2/3 p-7">
-          <h2>... and my new Astro site!</h2>
           <p class="text-lg">I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!
             This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!
         </div>
@@ -53,16 +52,6 @@ const textCase = "uppercase";
             </div>
           ))}
         </div>
-        <p class="mt-10">My skills are:</p>
-        <ul>
-          <!-- {skills.map((skill) => <li>{skill}</li>)} -->
-        </ul>
-    
-        {happy && <p>I am happy to be learning Astro!</p>}
-    
-        {finished && <p>I finished this tutorial!</p>}
-    
-        {goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
       </div>
     </div>
   </BaseLayout>
