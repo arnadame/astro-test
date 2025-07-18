@@ -1,14 +1,15 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro'
-const PageTitle = "Blog"
-import '../styles/global.css'
+import BlogLayout from '../layouts/BlogLayout.astro'
+const PageTitle = "My Astro Learning Blog"
+
 ---
 <BaseLayout PageTitle={PageTitle}>
-  <div class="h-dvh bg-gray-900 text-white">
-    <ul>
-      <li><a href="/posts/post-1/">Post 1</a></li>
-      <li><a href="/posts/post-2/">Post 2</a></li>
-      <li><a href="/posts/post-3/">Post 3</a></li>
-    </ul>
+  <div class="h-dvh bg-gray-900 text-white flex flex-col items-center">
+    <h1 class="text-4xl font-bold">My Astro Learning Blog</h1>
+    <p class="py-5 font-light">This is where i will post my Astro Journey</p>
+    <div class="w-2/3 flex flex-wrap gap-10 justify-center py-5">
+      <BlogLayout></BlogLayout>
+    </div>
   </div>
 </BaseLayout>

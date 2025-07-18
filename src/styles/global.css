@@ -2,8 +2,8 @@
 @import "flowbite/src/themes/default";
 @plugin "flowbite/plugin";
 @source "../../node_modules/flowbite";
-@import url('https://fonts.cdnfonts.com/css/montserrat');
+/* @import url('https://fonts.cdnfonts.com/css/montserrat'); */
 
-*{
+/* *{
   font-family: 'Montserrat', sans-serif;
-}
+} */

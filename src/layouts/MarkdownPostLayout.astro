@@ -5,14 +5,51 @@ import BaseLayout from './BaseLayout.astro';
 
 import '../styles/global.css'
 ---
-<BaseLayout>
-  <div class="bg-gray-900 w-full h-dvh flex flex-col items-center gap-10">
-    <h1 class="m-0 text-4xl text-white pt-5">{frontmatter.title}</h1>
-    <p class="text-white text-lg">{frontmatter.pubDate.toString().slice(0,10)}</p>
-    <p class="text-white text-lg"><em>{frontmatter.description}</em></p>
-    <p class="text-white text-lg">Written by: {frontmatter.author}</p>
-    <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-    <ul>{frontmatter.tags.map((tag: string) => <li class="text-white text-lg">{tag}</li>)}</ul>
-  </div>
-  <slot />
+<BaseLayout PageTitle={frontmatter.title}>
+  <main class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen py-16 px-6">
+    <div class="max-w-3xl mx-auto space-y-6">
+      
+      <!-- Blog Header -->
+      <div class="space-y-2 text-center">
+        {frontmatter.icon && (
+          <div class="text-4xl">{frontmatter.icon}</div>
+        )}
+        <h1 class="text-4xl font-bold">{frontmatter.title}</h1>
+        <p class="text-sm text-gray-500 dark:text-gray-400">
+          {frontmatter.pubDate.toString().slice(0, 10)} • Written by {frontmatter.author}
+        </p>
+        <p class="text-lg italic text-gray-700 dark:text-gray-300">{frontmatter.description}</p>
+      </div>
+
+      <!-- Featured Image -->
+      {frontmatter.image?.url && (
+        <div class="w-full">
+          <img 
+            src={frontmatter.image.url} 
+            alt={frontmatter.image.alt ?? 'Blog image'} 
+            class="rounded-lg w-full object-cover shadow-md"
+          />
+        </div>
+      )}
+
+      <!-- Tags -->
+      {frontmatter.tags?.length > 0 && (
+        <ul class="flex flex-wrap gap-2 justify-center">
+          {frontmatter.tags.map((tag: string) => (
+            <li class="bg-purple-100 dark:bg-purple-800/40 text-purple-800 dark:text-purple-300 text-sm px-3 py-1 rounded-full font-medium">
+              #{tag}
+            </li>
+          ))}
+        </ul>
+      )}
+
+      <p class="text-xl text-gray-400">{frontmatter.summary}</p>
+
+      <!-- Post Content -->
+      <article class="prose dark:prose-invert prose-lg max-w-none">
+        <slot />
+      </article>
+    </div>
+  </main>
 </BaseLayout>
+
