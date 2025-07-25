@@ -14,10 +14,12 @@ const { PageTitle } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{PageTitle}</title>
 	</head>
-	<body>	
-  <Header />
-    <slot />
-	<Footer />
+	<body>
+		<div class="min-h-dvh flex flex-col">
+			<Header />
+				<slot />
+			<Footer />
+		</div>	
 	</body>
   <script is:inline src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 </html>
