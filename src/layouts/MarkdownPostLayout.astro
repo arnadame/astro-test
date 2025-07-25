@@ -6,7 +6,7 @@ import BaseLayout from './BaseLayout.astro';
 import '../styles/global.css'
 ---
 <BaseLayout PageTitle={frontmatter.title}>
-  <main class="bg-white dark:bg-gray-900 text-gray-900 dark:text-white min-h-screen py-16 px-6">
+  <main class="bg-white dark:bg-gray-900 flex-grow text-gray-900 dark:text-white min-h-screen py-16 px-6">
     <div class="max-w-3xl mx-auto space-y-6">
       
       <!-- Blog Header -->
@@ -42,8 +42,10 @@ import '../styles/global.css'
           ))}
         </ul>
       )}
-
-      <p class="text-xl text-gray-400">{frontmatter.summary}</p>
+      
+      {frontmatter.summary.map((summ: string) => (
+        <p class="text-xl text-gray-400">{summ}</p>
+      ))}
 
       <!-- Post Content -->
       <article class="prose dark:prose-invert prose-lg max-w-none">

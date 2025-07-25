@@ -9,8 +9,9 @@ image:
   alt: 'The Astro logo on a dark background with a purple gradient arc.'
 tags: ["astro", "blogging", "learning in public", "successes"]
 icon: "🚀"
+summary: [
+  "The second week of my Astro journey was even more exciting than the first! 🚀",
+  "I challenged myself to build a small component completely from memory — and it worked. The simplicity of Astro makes it feel natural to reuse and organize pieces of UI. I'm starting to understand how powerful layouts and components can be, especially when paired with Markdown content like this."
+]
 ---
 
-The second week of my Astro journey was even more exciting than the first! 🚀
-
-I challenged myself to build a small component completely from memory — and it worked. The simplicity of Astro makes it feel natural to reuse and organize pieces of UI. I'm starting to understand how powerful layouts and components can be, especially when paired with Markdown content like this.
