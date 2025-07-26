@@ -1,5 +1,11 @@
 ---
 const { post, text, index } = Astro.props
+const sampleTexts = [
+  "This is the first post of my new Astro blog.",
+  "After learning some Astro, I couldn't stop! I wrote and imported a small component from memory.",
+  "I had some challenges, but asking in the community really helped! The Discord community is friendly and helpful.",
+  "This post will show up with my other posts, thanks to `import.meta.glob()`."
+];
 ---
 
   <div class="max-w-sm p-6 bg-white border w-100 flex flex-col justify-between border-gray-200 rounded-lg shadow-sm dark:bg-gray-800 dark:border-gray-700">
@@ -7,7 +13,8 @@ const { post, text, index } = Astro.props
       <a href={post.url}>
           <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{post.frontmatter.icon} {post.frontmatter.title}</h5>
       </a>
-      {text && <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{text[index]}</p>}
+      <!-- {text && <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{text[index]}</p>} -->
+      <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{sampleTexts[index]}</p>
     </div>
     <div class="flex justify-between items-end">
       <a href={post.url} class="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">

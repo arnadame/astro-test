@@ -2,14 +2,14 @@
 const { frontmatter } = Astro.props;
 import BlogCard from "../components/BlogCard.astro";
 const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }));
-const sampleTexts = [
-  "This is the first post of my new Astro blog.",
-  "After learning some Astro, I couldn't stop! I wrote and imported a small component from memory.",
-  "I had some challenges, but asking in the community really helped! The Discord community is friendly and helpful.",
-  "This post will show up with my other posts, thanks to `import.meta.glob()`."
-];
+// const sampleTexts = [
+//   "This is the first post of my new Astro blog.",
+//   "After learning some Astro, I couldn't stop! I wrote and imported a small component from memory.",
+//   "I had some challenges, but asking in the community really helped! The Discord community is friendly and helpful.",
+//   "This post will show up with my other posts, thanks to `import.meta.glob()`."
+// ];
 ---
 
       {allPosts.map((post: any, index: number) => 
-        <BlogCard post={post} text={sampleTexts} index={index}></BlogCard>
+        <BlogCard post={post} index={index}></BlogCard>
         )}

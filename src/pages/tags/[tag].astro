@@ -23,11 +23,11 @@ const { posts } = Astro.props;
 <BaseLayout pageTitle={tag}>
   <div class="flex-grow bg-gray-900 text-white flex flex-col items-center">
     <h1 class="text-4xl font-bold">Posts tagged with {tag}</h1>
-    <ul>  
+    <div class="grid grid-cols-3 py-10 gap-10">  
       <!-- {posts.map((post: any) => <li>{post.frontmatter.title}</li>)} -->
-      {posts.map((post: any) => 
-      <BlogCard post={post}/>
+      {posts.map((post: any, index: number) => 
+      <BlogCard post={post} index={index}/>
       )}
-    </ul>
+    </div>
   </div>
 </BaseLayout>
