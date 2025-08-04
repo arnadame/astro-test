@@ -1,7 +1,9 @@
 ---
+import { getCollection } from "astro:content";
+
 const { frontmatter } = Astro.props;
+const allPosts = await getCollection("blog");
 import BlogCard from "../components/BlogCard.astro";
-const allPosts = Object.values(import.meta.glob('../pages/posts/*.md', { eager: true }));
 // const sampleTexts = [
 //   "This is the first post of my new Astro blog.",
 //   "After learning some Astro, I couldn't stop! I wrote and imported a small component from memory.",
