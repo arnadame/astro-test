@@ -32,16 +32,16 @@ const fontWeight = "bold";
 const textCase = "uppercase";
 ---
   <BaseLayout >
-    <div class="bg-gray-900 text-white flex-grow flex flex-col items-center">
+    <div class="dark:bg-gray-900 bg-gray-100 text-white flex-grow flex flex-col items-center">
       <div class="flex flex-col items-center w-2/3">
-        <h1 class="text-white text-4xl">{pageTitle}</h1>
+        <h1 class="dark:text-white text-black text-4xl">{pageTitle}</h1>
 
         <div class="py-5 flex flex-col items-center w-2/3 p-7">
-          <p class="text-lg">I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!
+          <p class="text-lg text-black dark:text-white">I am working through Astro's introductory tutorial. This is the second page on my website, and it's the first one I built myself!
             This site will update as I complete more of the tutorial, so keep checking back and see how my journey is going!
         </div>
         
-        <h1 class="text-white text-3xl py-5">My skills are</h1>
+        <h1 class="dark:text-white text-black text-3xl py-5">My skills are</h1>
         <div class="flex flex-wrap justify-center gap-5">
           {Object.keys(icons).map(skill => (
             <div class="flex justify-center max-w-sm p-6 w-full bg-white border border-gray-200 rounded-lg shadow-sm hover:bg-gray-100 dark:bg-gray-800 dark:border-gray-700 dark:hover:bg-gray-700">

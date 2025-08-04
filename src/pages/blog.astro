@@ -5,9 +5,9 @@ const PageTitle = "My Astro Learning Blog"
 
 ---
 <BaseLayout PageTitle={PageTitle}>
-  <div class="flex-grow bg-gray-900 text-white flex flex-col items-center">
+  <div class="flex-grow dark:bg-gray-900 bg-gray-100 dark:text-white text-black flex flex-col items-center">
     <h1 class="text-4xl font-bold">My <span class="text-[#10b981">Astro</span> Learning Blog</h1>
-    <p class="py-5 font-light">This is where i will post my Astro Journey</p>
+    <p class="py-5 font-light text-lg">This is where i will post my Astro Journey</p>
     <div class="w-2/3 gap-10 py-5 grid grid-cols-3">
       <BlogLayout></BlogLayout>
     </div>
